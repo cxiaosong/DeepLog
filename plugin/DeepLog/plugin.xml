@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<runtime>
+
+            <library name="lib/">
+
+             <export name="*"/>
+
+            </library>
+
+   </runtime>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="DeepLog"
+            id="chang.LogLocationRecommend">
+      </category>
+      <view
+            name="DeepLog"
+            icon="icons/sample.png"
+            category="chang.LogLocationRecommend"
+            class="loglocationrecommend.view.ShowView"
+            id="loglocationrecommend.view.ShowView">
+      </view>
+   </extension>
+   
+      <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="loglocationrecommend.view.ShowView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="LogLocationRecommend.commands.category">
+      </category>
+      <command
+            name="Sample Command"
+            categoryId="LogLocationRecommend.commands.category"
+            id="LogLocationRecommend.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="LogLocationRecommend.commands.sampleCommand"
+            class="loglocationrecommend.handlers.SampleHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="LogLocationRecommend.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+
+
+</plugin>
