@@ -1,2 +1,3 @@
-1 If you want use this plugin you should strat this http server using httpModelServer.py
-2 You can also trained your own deep learing model, and put into this http server.
+1 Firstly you should unzip model_together_final.rar
+2 Secondlly, if you want use this plugin you should start this http server with httpModelServer.py
+3 Thirdly, you can also trained your own deep learing model, and put into this http server.
