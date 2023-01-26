@@ -7,4 +7,6 @@
 
 ./model is the python code that built the deep learning model.
 
-Cause the size of plugin is much more 25MB, we can't upload this plugin to this repository, but you shoud email me for this plugin(cxiaosong@foxmail.com).
+./plugin is the plugin source code.
+
+If any problems occur, you could send an email to me(cxiaosong@foxmail.com).
